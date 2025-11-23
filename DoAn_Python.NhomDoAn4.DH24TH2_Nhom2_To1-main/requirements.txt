@@ -1,0 +1,24 @@
+# Thư viện cơ bản cho ứng dụng
+# Tkinter đã có sẵn trong Python
+
+# Kết nối Database (sẽ dùng sau)
+# pyodbc==4.0.39  # Cho SQL Server
+# pymysql==1.1.0  # Cho MySQL
+# sqlite3 đã có sẵn trong Python
+
+# Tiện ích bổ sung
+
+pillow==10.1.0  # Xử lý hình ảnh (nếu cần)
+for text, command, style_name in buttons_info:
+    if text == "---":
+        ttk.Separator(...).grid(...)
+    else:
+        # XU LY RIENG NUT "THEM MOI"
+        if text == "➕ THÊM MỚI":
+            ttk.Button(button_group, text=text, command=command, style=style_name).grid(
+                row=row_index, column=0, padx=5, pady=4, sticky='w')  # <-- CANH TRAI
+        else:
+            # CAC NUT KHAC VAN BINH THUONG
+            ttk.Button(button_group, text=text, command=command, style=style_name).grid(
+                row=row_index, column=0, padx=5, pady=4, sticky='ew')
+    row_index += 1
